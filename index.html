@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Switcher</title>
+</head>
+<style>
+    .container {
+        /* background-color: orangered; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        /* width: 50%; */
+        overflow: hidden;
+    }
+
+    .left-box {
+        border: px solid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        
+
+    }
+
+    .left-box span {
+        height: 30px;
+        width: 30px;
+        margin: 20px;
+        flex-wrap: wrap;
+        border-radius: 50%;
+    }
+
+    .circle1 {
+        background-color: pink;
+        cursor: pointer;
+    }
+
+    .circle2 {
+        cursor: pointer;
+        background-color: yellowgreen;
+    }
+
+    .circle3 {
+        cursor: pointer;
+        background-color: rgb(4, 11, 51);
+    }
+
+    .circle4 {
+        background-color: orangered;
+        cursor: pointer;
+    }
+
+    p {
+        text-align: justify;
+        font-size: .8rem;
+    }
+
+    h2 {
+        overflow: auto;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>CHANGE THE BACKGROUND COLOUR OF THE PARAGRAPH <br> USING THESE COLOURED CIRCLES</h2>
+        <div class="left-box">
+            <span id="cir1" class="circle1" onclick="changeColor(1)"></span>
+            <span class="circle2" onclick="changeColor(2)"></span>
+            <span class="circle3" onclick="changeColor(3)"></span>
+            <span class="circle4" onclick="changeColor(4)"></span>
+        </div>
+        <div class="">
+            <p id="para">
+                Hii There.
+This is Rahul Kumar Roy a Computer Science Student  studying Bachelor's of Computer Application ( BCA ) from the Dronacharya Government College , Gurugram Haryana . I loves to interact with the technology revolving around . It always surprises me that how machines works correctly without much interference of humans. I know this is called automation but still it gives me a Number of questions or doubts that how we do it . This is why I likes to learn new skills and technology . Computer Science is not just a branch where we learn operating or working on computers but it is more than a magic that happens when a code works.
+I am much interested in Teaching and Learning new things revolving around and apply my knowledge to build something that can help others. I loves to share whatever knowledge i have,  it  always makes me Happy. In order to do that I started YouTube Channel Knows as Rahul Roy where I Uploads Programming Videos In easy Hindi language so that Any students who is not able to understand or week in English can easily Learn from there. I am also trying to build a community where a student can get immediate help if he/she gets stuck in any questions, Because for beginners it is always very difficult or confusing to know from where to start or how to start. In order to minimise this problem i am trying to build a community where seniors or some students who know stuffs can clear doubts of juniors or begginer.
+       Thank you
+             .</p>
+        </div>
+    </div>
+
+
+    <script>
+        const cir = document.getElementById("cir1");
+        console.log(cir.innerHTML);
+        let par = document.getElementById("para");
+        function changeColor(num) {
+            if (num == 1) {
+                par.style.color = "pink";
+            }
+            else if (num == 2) {
+                par.style.color = "yellowgreen";
+            }
+            else if (num == 3) {
+                par.style.color = "rgb(4, 11, 51)";
+                // par.style.color="white";
+            }
+            else {
+                par.style.color = "orangered";
+            }
+        }
+    </script>
+</body>
+
+</html>
